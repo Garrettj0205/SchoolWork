@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+	double tipRate = .18; 
+	double mealPrice = 0;
+	double salesTax = .07;
+	double totalCost = 0;
+	double tipOut = 0;
+	double endTax = 0;
+
+
+	//First Meal Total
+
+	cout << "Please enter the total of your order here:";
+	cin >> mealPrice;
+	
+	tipOut = mealPrice * tipRate;
+	endTax = mealPrice * salesTax;
+	totalCost = mealPrice + tipOut + endTax;
+	
+
+	cout << "An 18% tip would be: " << tipOut << endl;
+	cout << "And the 7% sales tax of this is: " << endTax << endl;
+	cout.precision(2);
+	cout << "So the total of this order is: " << totalCost << endl;
+
+}
