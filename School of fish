@@ -1,0 +1,39 @@
+#include "template.h"
+using namespace AGK;
+app APP;
+
+//Screen Size
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+
+//Sprite constants
+const int fish_index = 1;
+const int water_index = 2;
+
+void app:: Begin ( void )
+{
+	//SCREEN
+	agk::SetVirtualResolution(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+	//Fish create
+	agk::CreateSprite (fish_index, "fish.png");
+
+	//Background create
+	agk:: CreateSprite (water_index, "under_water.png");
+
+	//Bring forward fish
+	agk::SetSpriteDepth(fish_index, 0);
+	agk::SetSpriteDepth(water_index, 1000);
+
+	//Main Loop
+	void app::Loop ( void )
+	{
+		agk::Sync();
+	}
+
+	void app::End (void )
+	{
+
+	}
+
+}
