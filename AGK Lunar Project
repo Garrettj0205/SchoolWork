@@ -1,0 +1,38 @@
+#inlcude "template.h"
+using namespace AGK;
+app APP;
+
+//constants
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+const int SPRITE_INDEX = 1;
+int spaceDown = agk::GetRawKeyPressed(AGK_KEY_SPACE);
+
+
+//Beginning code
+void app::Begin (void)
+{
+	agk::SetWindowTitle("Lunar Landing");
+
+	//Virtual resolution
+agk::SetVirtualResolution(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+	//Sprite creation 
+	agk::CreateSprite(SPRITE_INDEX, "spaceship.png");
+
+}
+
+//Main Loop
+void app::Loop ( void )
+{
+	case AGK_KEY_SPACE:
+	float directionX = agk::GetDirectionX();
+
+}
+//Refresh
+agk::Sync();
+
+// End
+void app::End ( void )
+{
+}
