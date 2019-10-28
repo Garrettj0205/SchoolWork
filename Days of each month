@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+	
+	int days_month();
+	int yup = 0;
+
+
+int main ()
+{
+	
+	days_month();
+
+}
+
+//Months we'll be going to use
+int days_month()
+{
+
+	string Month[12];
+	Month [0] = "January";
+		Month [1] = "February";
+			Month [2] = "March";
+				Month [3] = "April";
+					Month [4] = "May";
+						Month [5] = "June";
+							Month [6] = "July";
+								Month [7] = "August";
+									Month [8] = "September";
+										Month [9] = "October";
+											Month [10] = "November";
+												Month [11] = "December";
+
+//Declare amount of days to be shown and the dates as well
+const int theDays = 12;
+int Days [theDays] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+//The loop we will be using
+for(int i=0; i < theDays; i++)
+{
+	cout << Month [i] << " has " << Days[i] << " days in the month." << endl;
+
+
+}
+cout << "Here's your local calendar!";
+	cin >> yup;
+	return 0;
+
+		
+}
